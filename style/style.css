@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #00ADDC;
+    transition: 1s;
+
+}
+
+#worldSvg {
+    margin-top: 5vh;
+    height: 90vh;
+    width: 100%;
+}
+
+#kzSvgMap:hover {
+    cursor: pointer;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+@media screen and (orientation:landscape) {
+    body {
+        overflow: hidden;
+    }
+
+    #worldSvg.zoom {
+        transform: scale(5) translateY(10%) translateX(5%);
+    }
+}
+
+@media screen and (orientation:portrait) {
+    body {
+        overflow: hidden;
+    }
+
+    #worldSvg.zoom {
+        transform: scale(5) translateY(5%) translateX(10%);
+    }
+}
+
