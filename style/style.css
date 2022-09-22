@@ -1,25 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #00ADDC;
-    transition: 1s;
-
+    background-color: #A3D9FF;
 }
 
 #worldSvg {
     margin-top: 5vh;
     height: 90vh;
     width: 100%;
+    transition: 1s;
 }
 
 #kzSvgMap:hover {
     cursor: pointer;
 }
 
+#kzDetailsSvg {
+    visibility: hidden;
+}
+
+#kzDetailsSvg.zoom {
+    visibility: visible;
+}
+
+/* all icons */
+.kzMapIcon,
+#kzSvgMapTitle{
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
 .hide {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: 1s;
 }
 
 @media screen and (orientation:landscape) {
@@ -28,7 +41,7 @@
     }
 
     #worldSvg.zoom {
-        transform: scale(5) translateY(10%) translateX(5%);
+        transform: scale(5) translateY(10%) translateX(4%);
     }
 }
 
@@ -38,7 +51,23 @@
     }
 
     #worldSvg.zoom {
-        transform: scale(5) translateY(5%) translateX(10%);
+        transform: scale(5) translateY(4%) translateX(10%);
     }
 }
+
+/* atyrau */
+
+@media screen and (orientation:landscape) {
+    #worldSvg.zoomToAtyrau {
+        transform: scale(14) translateY(8%) translateX(9%);
+    }
+}
+
+@media screen and (orientation:portrait) {
+    #worldSvg.zoomToAtyrau {
+        transform: scale(14) translateY(3%) translateX(17%);
+    }
+}
+
+/* aturay */
 
